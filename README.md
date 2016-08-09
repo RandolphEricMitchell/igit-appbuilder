@@ -1,1 +1,1 @@
-# igit-appbuilder-server
+# igit-appbuilder
