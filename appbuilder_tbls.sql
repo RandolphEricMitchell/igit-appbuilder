@@ -1,71 +1,71 @@
+CREATE TABLE Users
+ (
+ Id int NOT NULL,
+ FirstName varchar(255) NOT NULL,
+ LastName varchar(255) NOT NULL,
+ DateTimeAdded DATETIME,
+ LastTimeUpdated DATETIME,
+ PRIMARY KEY (Id)
+ );
+ 
 CREATE TABLE Systems
  (
- P_Id int NOT NULL,
- LastName varchar(255) NOT NULL,
- FirstName varchar(255),
- Address varchar(255),
- City varchar(255),
- PRIMARY KEY (P_Id)
+ Id int NOT NULL,
+ UserId int NOT NULL,
+ Name varchar(255) NOT NULL,
+ DateTimeAdded DATETIME,
+ LastTimeUpdated DATETIME,
+ PRIMARY KEY (Id)
  );
  
  CREATE TABLE Systems_Pages
  (
- P_Id int NOT NULL,
- LastName varchar(255) NOT NULL,
- FirstName varchar(255),
- Address varchar(255),
- City varchar(255),
- PRIMARY KEY (P_Id)
+ Id int NOT NULL,
+ Name varchar(255) NOT NULL,
+ SystemId varchar(255),
+ DateTimeAdded DATETIME,
+ LastTimeUpdated DATETIME,
+ PRIMARY KEY (Id)
  );
  
  CREATE TABLE Systems_Permissions
  (
- P_Id int NOT NULL,
- LastName varchar(255) NOT NULL,
- FirstName varchar(255),
- Address varchar(255),
- City varchar(255),
- PRIMARY KEY (P_Id)
- );
- 
- CREATE TABLE Persons
- (
- P_Id int NOT NULL,
- LastName varchar(255) NOT NULL,
- FirstName varchar(255),
- Address varchar(255),
- City varchar(255),
- PRIMARY KEY (P_Id)
+ Id int NOT NULL,
+ Name varchar(255) NOT NULL,
+ DateTimeAdded DATETIME,
+ LastTimeUpdated DATETIME,
+ PRIMARY KEY (Id)
  );
  
  CREATE TABLE Systems_Roles_Permissions
  (
- P_Id int NOT NULL,
- LastName varchar(255) NOT NULL,
- FirstName varchar(255),
- Address varchar(255),
- City varchar(255),
- PRIMARY KEY (P_Id)
+ Id int NOT NULL,
+ SystemRoleId int NOT NULL,
+ SystemPermissionId int NOT NULL,
+ DateTimeAdded DATETIME,
+ LastTimeUpdated DATETIME,
+ PRIMARY KEY (Id)
  );
  
 CREATE TABLE Systems_Roles
  (
  P_Id int NOT NULL,
- LastName varchar(255) NOT NULL,
- FirstName varchar(255),
- Address varchar(255),
- City varchar(255),
- PRIMARY KEY (P_Id)
+ Id int NOT NULL,
+ Name varchar(255) NOT NULL,
+ DateTimeAdded DATETIME,
+ LastTimeUpdated DATETIME,
+ PRIMARY KEY (Id)
+ );
  );
  
 CREATE TABLE Systems_Users
  (
- P_Id int NOT NULL,
+ Id int NOT NULL,
+ FirstName varchar(255) NOT NULL,
  LastName varchar(255) NOT NULL,
- FirstName varchar(255),
- Address varchar(255),
- City varchar(255),
- PRIMARY KEY (P_Id)
+ DateTimeAdded DATETIME,
+ LastTimeUpdated DATETIME,
+ PRIMARY KEY (Id)
  );
  
  CREATE TABLE Systems_Users_Roles
@@ -78,7 +78,7 @@ CREATE TABLE Systems_Users
  PRIMARY KEY (P_Id)
  );
 
-  CREATE TABLE Systems_Components
+CREATE TABLE Systems_Components
  (
  P_Id int NOT NULL,
  LastName varchar(255) NOT NULL,
