@@ -1,0 +1,8 @@
+Core Layout Concepts:
+This doc shows examples of how the layout is setup.
+
+Top Level Container = <div id="igit-global-container-div">
+
+Top Level Nav = <nav id="igit-global-top-nav"><ul><li> Etc...
+
+Main Section = <main id="igit-[subsystem-name]-subsystem"><section> Etc...
