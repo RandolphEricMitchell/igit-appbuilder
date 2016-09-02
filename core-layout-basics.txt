@@ -1,8 +1,17 @@
 Core Layout Concepts:
+
 This doc shows examples of how the layout is setup.
+There are two main levels that function in iGit UI layouts: global and app.
+For unique containers across the global system, the standard is to use "igi-global-*"
+prefix for id. For components that are app specific, use "igit-app-*".  This is 
+pseudo namespacing, but it prevents us from interfering with other CSS frameworks if you
+want to use them (Do unto others principle is used here).
 
 Top Level Container = <div id="igit-global-container-div">
 
 Top Level Nav = <nav id="igit-global-top-nav"><ul><li> Etc...
 
 Main Section = <main id="igit-[subsystem-name]-subsystem"><section> Etc...
+
+Components = <HtmlElement class="igit-global-[component-name]">Submit</HtmlElement>
+  components = btn, label, 
